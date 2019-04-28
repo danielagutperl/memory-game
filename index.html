@@ -7,6 +7,7 @@
     <title>Memory Game</title>
     <meta name="description" content="This is a Memory Game">
     <meta name="author" content="Daniela Gutperl">
+    <link href="css/reset.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -14,37 +15,43 @@
 </head>
 
 <body>
-    <h1>Memory Game</h1>
-    <a href="#">Instructions</a><span>   </span><a href="#">Game</a>
-    <h2>Instructions</h2>
-    <p class="instructions">Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card
-        game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn.
-        The object of the game is to turn over pairs of matching cards.</p>
-    <div>
-        <img src="images/back.png" alt="Queen of Diamonds">
-        <img src="images/back.png" alt="Queen of Hearts">
-        <img src="images/back.png" alt="King of Diamonds">
-        <img src="images/back.png" alt="King of Hearts">
-    </div>
+    <header>
+        <h1>Memory Game</h1>
+    </header>
+    <nav>
+        <a href="#instructions">Instructions</a>
+        <a href="#game">Game</a>
+    </nav>
+    <main>
+        <h2 id="instructions">Instructions</h2>
+        <p class="instructions">Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or
+            simply Pairs, is a card
+            game in which all of the cards are laid face down on a surface and two cards are flipped face up over each
+            turn.
+            The object of the game is to turn over pairs of matching cards.</p>
+        <div id="game">
+            <img src="images/back.png" alt="Queen of Diamonds">
+            <img src="images/back.png" alt="Queen of Hearts">
+            <img src="images/back.png" alt="King of Diamonds">
+            <img src="images/back.png" alt="King of Hearts">
+        </div>
 
-    <h3>You should play this now!</h3>
-    <ul>
-        <li>Because this will enrich your life!</li>
-        <li>Because ...</li>
-    </ul>
-
-    <footer>
+        <h3>You should play this now!</h3>
+        <ul>
+            <li>Because this will enrich your life!</li>
+            <li>Because ...</li>
+        </ul>
+    </main>
+    <footer class="clearfix">
         <h3>Socials</h3>
         <div class="social-media-footer">
             <a href="https://www.facebook.com/daniela.gutperl"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.linkedin.com/in/danielagutperl/"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/dani_ela_gram/"><i class="fab fa-instagram"></i></a>
-
         </div>
-
+        <p class="copyright">Copyright 2019</p>
+        <p class="message">Created with <i class="fas fa-magic"></i> by <span class="name">Daniela</span></p>
     </footer>
-
-
     <script src="js/jquery-3.3.1.js"></script>
     <!--library goes first, because remember stuff later overwrites-->
     <script src="js/flickity.pkgd.js"></script>

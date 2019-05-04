@@ -33,25 +33,30 @@ const checkMatch = () => {
     }
 }
 
-const flipCard = () => {
-    cardsInPlay.push(cardId.rank)
-    console.log(`The flipped card is ${cardId.rank}.`)
-    console.log(cardId.cardImage)
-    console.log(cardId.suit)
+const flipCard = (e) => {
+    var element = e.currentTarget;
+    var cardId = element.getAttribute('cardindex');
+    element.setAttribute('src', cards[cardId].cardImage);
+    cardsInPlay.push(cards.rank)
+    console.log(`The flipped card is ${cards.rank}.`)
+    console.log(cards.cardImage)
+    console.log(cards.suit)
     return checkMatch();
 }
 
 const createBoard = () => {
     for (i = 0; i < cards.length; i++) {
-        let newCard = document.createElement('img');
-        newCard.setAttribute('src', 'memory-game/images/back.png');
-        newCard.setAttribute('data-id', i);
+        var newCard = document.createElement('img');
+        newCard.setAttribute('src', 'images/back.png');
+        newCard.setAttribute('cardindex', i);
         newCard.addEventListener('click', flipCard);
         document.getElementById('game-board').appendChild(newCard);
     }
 }
 
 createBoard();
+
+
 
 
 
